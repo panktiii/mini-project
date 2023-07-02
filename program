@@ -3,7 +3,6 @@ def load_contacts():
     try:
         with open("contacts.csv", "r", newline="") as file:
             rdr = csv.reader(file)
-            next(rdr)
             contacts = list(rdr)
             return contacts
     except FileNotFoundError:
